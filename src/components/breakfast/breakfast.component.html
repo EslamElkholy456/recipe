@@ -1,0 +1,103 @@
+<div class="grid grid-cols-12">
+  <div class="col-end-2 col-start-0">
+    <div class="h-full fixed w-[382px] p-[16px] bg-white">
+      <div class="logo">
+        <img src="/logo-BfNap0Pe.png" alt="">
+      </div>
+
+    </div>
+  </div>
+  <div class="col-start-3 col-end-13 ">
+    <div class="">
+      <header class="ms-[100px] mt-[100px] bg-red-400">
+        <h1 class="text-[40px]">Learn, Cook, Eat Your Food</h1>
+      </header>
+
+      <div class=" ms-[100px] mt-[100px] flex justify-center border-b">
+
+
+        <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/home" routerLinkActive="active-a">all</a>
+        </li>
+
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/beef" routerLinkActive="active-a">Beef</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/chicken" routerLinkActive="active-a">Chicken</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/dessert" routerLinkActive="active-a">Dessert</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/lamb" routerLinkActive="active-a">Lamb</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/miscellaneous" routerLinkActive="active-a">Miscellaneous</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/pasta" routerLinkActive="active-a">Pasta</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/pork" routerLinkActive="active-a">Pork</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/seafood" routerLinkActive="active-a">Seafood</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/side" routerLinkActive="active-a">Side</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/starter" routerLinkActive="active-a">Starter</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/vegan" routerLinkActive="active-a">Vegan</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/vegetarian" routerLinkActive="active-a">Vegetarian</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/breakfast" routerLinkActive="active-a">Breakfast</a>
+        </li>
+          <li class="m-5 ">
+            <a  class="inline-block py-3 border px-7 rounded-3xl hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white " routerLink="/goat" routerLinkActive="active-a">Goat</a>
+        </li>
+
+
+
+
+        </ul>
+
+        </div>
+
+      <div class="cards flex justify-evenly flex-wrap mt-[100px]   mx-auto">
+        @for (meal of products; track $index) {
+          <div class="max-w-[300px] min-w-[300px] mb-[100px] ms-[100px] px-6  pb-7 rounded-[50px] bg-white border border-gray-200 shadow-sm relative dark:bg-gray-800 dark:border-gray-700">
+
+            <div class=" w-[75%] m-auto translate-y-[-30%]">
+              <img class="rounded-[50%] w[100%] shadow-2xl " [src]='meal.strMealThumb' alt="" />
+            </div>
+            <div class="flex flex-col items-center ">
+
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ meal.strMeal}}</h5>
+               
+                <button class="p-8 bg-[#059669] text-xl font-bold  text-white rounded-[50px]">view recipe</button>
+
+
+        </div>
+
+      </div>
+    }
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

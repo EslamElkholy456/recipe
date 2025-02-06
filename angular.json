@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -103,5 +104,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1f08e1b7-c415-4422-897b-46a2bd578bfc"
   }
 }
